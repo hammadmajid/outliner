@@ -5,7 +5,7 @@ Outliner is a simple, single page website theme designed to showcase your career
 ## Features
 
 - [ ] Acessible
-- [ ] SEO Optamized
+- [ ] SEO Optimized
 - [ ] Sitemap
 - [x] Zero Javascript (client)
 - [x] Responsive
@@ -15,9 +15,28 @@ Outliner is a simple, single page website theme designed to showcase your career
  - Framework: [Astro.js](https://astro.build)
  - Styling: [TailwindCSS](https://tailwindcss.com)
  - Icons: [FontAwesome](https://fontawesome.com)
- - Prototype: [Figma](https://figma.com)
- - CI/CD: [Netlify](https://netlify.app) | [GitHub Actions](https://actions.github.com)
- - Version control: [Git]() | [GitHub]()
+ - Prototyping: [Figma](https://figma.com)
+ - Package manager: [npm](https://www.npmjs.com/)
+ - CI/CD: [Netlify](https://netlify.app) | [GitHub Actions](https://github.com/features/actions)
+ - Version control: [Git](https://git-scm.com) | [GitHub](https://github.com)
  
+ ## Documentataion
+ 
+ ```bash
+ # clone the repository
+ git clone https://gihub.com/hammadmajid/outliner outliner
+ 
+ # change the working directory
+ cd outliner
+ 
+ # install the dependencies
+ npm ci
+ 
+ # start a dev server
+ npm start
+ 
+ # build for production
+ npm run build
+ ```
  ---
  <p align="center"><sub>Made with ♥ by <a href="https://hammadmajid.com">Hammad Majid</a></sub></p>

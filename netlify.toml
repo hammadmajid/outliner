@@ -1,0 +1,25 @@
+[build]
+base = "."
+publish = "dist/"
+command = "npm run build"
+
+[[plugins]]
+package = "@netlify/plugin-lighthouse"
+
+[[plugins]]
+package = "netlify-plugin-minify-html"
+
+[[plugins]]
+package = "@netlify/plugin-a11y"
+
+[[plugins]]
+package = "netlify-plugin-minify-html"
+
+[[plugins]]
+package = "netlify-plugin-subfont"
+
+[[redirects]]
+from = "/*"
+to = "/"
+status = 301
+force = false

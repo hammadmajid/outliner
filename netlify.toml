@@ -13,7 +13,7 @@ package = "netlify-plugin-minify-html"
 package = "@netlify/plugin-a11y"
 
 [[plugins]]
-package = "netlify-plugin-minify-html"
+package = "netlify-plugin-image-optim"
 
 [[plugins]]
 package = "netlify-plugin-subfont"

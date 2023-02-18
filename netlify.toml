@@ -7,4 +7,4 @@ command = "npm run build"
 from = "/*"
 to = "/"
 status = 301
-force = false
+force = true

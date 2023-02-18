@@ -1,4 +1,5 @@
 ---
+import Header from "../components/Header.astro";
 ---
 
 <html lang="en">
@@ -8,8 +9,19 @@
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
+		<script
+			src="https://kit.fontawesome.com/cbef3dd862.js"
+			crossorigin="anonymous"
+		></script>
 	</head>
-	<body>
-		<h1>Astro</h1>
+	<body
+		class="bg-gradient-to-br from-neutral-700 via-neutral-800 to-neutral-900 text-slate-50 md:h-screen"
+	>
+		<div class="flex flex-col md:flex-row">
+			<div class="h-screen md:w-1/2">
+				<Header />
+			</div>
+			<div class="h-screen md:w-1/2">ipsum</div>
+		</div>
 	</body>
 </html>

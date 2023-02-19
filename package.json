@@ -1,7 +1,7 @@
 {
 	"name": "outliner",
 	"type": "module",
-	"version": "0.0.1",
+	"version": "v1.0",
 	"scripts": {
 		"dev": "astro dev",
 		"start": "astro dev",

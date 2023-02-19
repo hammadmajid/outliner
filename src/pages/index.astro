@@ -1,5 +1,8 @@
 ---
 import Header from "../components/Header.astro";
+import About from "../components/About.astro";
+import Details from "../components/Details.astro";
+import Button from "../components/Button.astro";
 ---
 
 <html lang="en">
@@ -25,7 +28,28 @@ import Header from "../components/Header.astro";
 			<div class="h-screen md:w-1/2">
 				<Header />
 			</div>
-			<div class="h-screen md:w-1/2">ipsum</div>
+			<div
+				class="h-screen md:w-1/2 bg-gradient-to-br from-cyan-300 via-cyan-400 to-cyan-500 text-neutral-800 rounded-tl-lg rounded-tr-lg md:rounded-tr-none md:rounded-bl-lg flex flex-col justify-evenly px-8 py-6"
+			>
+				<About
+					text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias rerum non incidunt nihil doloremque quam aspernatur, delectus dolorem esse unde natus cupiditate architecto!"
+				/>
+				<hr class="border-neutral-900" />
+				<Details
+					title="Education"
+					year="2018 - 2020"
+					subtitle="Bachelor of Science in management"
+					info="lorem impsum doler sit emet."
+				/>
+				<hr class="border-neutral-900" />
+				<Details
+					title="Experience"
+					year="2021 - Present"
+					subtitle="Junior Content Creator"
+					info="lorem impsum doler, nihil quam."
+				/>
+				<Button email="johndoe@example.com" />
+			</div>
 		</div>
 	</body>
 </html>

@@ -1,0 +1,33 @@
+---
+export interface Props {
+    facebook: string;
+    twitter: string;
+    instagram: string;
+    linkedin: string;
+}
+
+const { facebook, twitter, instagram, linkedin } = Astro.props as Props;
+---
+
+<ul class="flex flex-row justify-evenly text-xl mx-auto w-2/5">
+    <li class="hover:text-cyan-400 transition-colors">
+        <a href={"https://facebook.com" + facebook} aria-label="Facebook"
+            ><i class="fa-brands fa-facebook"></i></a
+        >
+    </li>
+    <li class="hover:text-cyan-400 transition-colors">
+        <a href={"https://twitter.com" + twitter} aria-label="Twitter"
+            ><i class="fa-brands fa-twitter"></i></a
+        >
+    </li>
+    <li class="hover:text-cyan-400 transition-colors">
+        <a href={"https://instagram.com" + instagram} aria-label="Instagram"
+            ><i class="fa-brands fa-instagram"></i></a
+        >
+    </li>
+    <li class="hover:text-cyan-400 transition-colors">
+        <a href={"https://linkedin.com" + linkedin} aria-label="Linkedin"
+            ><i class="fa-brands fa-linkedin"></i></a
+        >
+    </li>
+</ul>

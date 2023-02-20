@@ -1,5 +1,6 @@
 ---
-import Header from "../components/Header.astro";
+import Profile from "../components/Profile.astro";
+import Links from "../components/Links.astro";
 import About from "../components/About.astro";
 import Details from "../components/Details.astro";
 import Button from "../components/Button.astro";
@@ -26,7 +27,22 @@ import Button from "../components/Button.astro";
 	>
 		<div class="flex flex-col md:flex-row">
 			<div class="h-screen md:w-1/2">
-				<Header />
+				<header class="h-full grid place-items-center">
+					<div class="space-y-5">
+						<Profile
+							name="John Doe"
+							pronouns="(he/him)"
+							title="Job title"
+							img="/picture.webp"
+						/>
+						<Links
+							facebook="me"
+							instagram="me"
+							twitter="me"
+							linkedin="me"
+						/>
+					</div>
+				</header>
 			</div>
 			<div
 				class="h-screen md:w-1/2 bg-gradient-to-br from-cyan-300 via-cyan-400 to-cyan-500 text-neutral-800 rounded-tl-lg rounded-tr-lg md:rounded-tr-none md:rounded-bl-lg flex flex-col justify-evenly px-8 py-6"

@@ -1,0 +1,16 @@
+---
+export interface Props {
+    name: string;
+    pronouns: string;
+    title: string;
+    img: string;
+}
+const { name, pronouns, title, img } = Astro.props as Props;
+---
+
+<img src={img} alt={"Image of " + img} class="w-1/2 h-1/2 rounded-md mx-auto" />
+<div class="text-center space-y-1 pb-8">
+    <h1 class="text-4xl font-bold">{name}</h1>
+    <p class="text-lg">{pronouns}</p>
+    <p class="text-xl font-medium pt-5">{title}</p>
+</div>

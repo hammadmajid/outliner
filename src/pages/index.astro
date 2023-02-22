@@ -1,4 +1,6 @@
 ---
+import Base from "../layouts/Base.astro";
+// required componenets
 import Profile from "../components/Profile.astro";
 import Links from "../components/Links.astro";
 import About from "../components/About.astro";
@@ -6,66 +8,38 @@ import Details from "../components/Details.astro";
 import Button from "../components/Button.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<meta
-			name="description"
-			content="Outliner is a simple, single page website theme designed to showcase your career. Crafted with popular front-end technologies such as Astro.js and TailwindCSS, Outliner is the ideal choice for your portfolio."
+<Base
+	title="Outliner | Website Theme"
+	description="Outliner is minimal, single page website theme."
+	favicon="/favicon.svg"
+>
+	<Fragment slot="primary">
+		<Profile
+			name="John Doe"
+			pronouns="(he/him)"
+			title="Web Developer"
+			img="/picture.webp"
 		/>
-		<title>Outliner | Website Theme</title>
-		<script
-			src="https://kit.fontawesome.com/cbef3dd862.js"
-			crossorigin="anonymous"
-		></script>
-	</head>
-	<body
-		class="bg-gradient-to-br from-neutral-700 via-neutral-800 to-neutral-900 text-slate-50 md:h-screen"
-	>
-		<div class="flex flex-col md:flex-row">
-			<div class="h-screen md:w-1/2">
-				<header class="h-full grid place-items-center">
-					<div class="space-y-5">
-						<Profile
-							name="John Doe"
-							pronouns="(he/him)"
-							title="Job title"
-							img="/picture.webp"
-						/>
-						<Links
-							facebook="me"
-							instagram="me"
-							twitter="me"
-							linkedin="me"
-						/>
-					</div>
-				</header>
-			</div>
-			<div
-				class="h-screen md:w-1/2 bg-gradient-to-br from-cyan-300 via-cyan-400 to-cyan-500 text-neutral-800 rounded-tl-lg rounded-tr-lg md:rounded-tr-none md:rounded-bl-lg flex flex-col justify-evenly px-8 py-6"
-			>
-				<About
-					text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias rerum non incidunt nihil doloremque quam aspernatur, delectus dolorem esse unde natus cupiditate architecto!"
-				/>
-				<hr class="border-neutral-900" />
-				<Details
-					title="Education"
-					year="2018 - 2020"
-					subtitle="Bachelor of Science in management"
-					info="lorem impsum doler sit emet."
-				/>
-				<hr class="border-neutral-900" />
-				<Details
-					title="Experience"
-					year="2021 - Present"
-					subtitle="Junior Content Creator"
-					info="lorem impsum doler, nihil quam."
-				/>
-				<Button email="johndoe@example.com" />
-			</div>
-		</div>
-	</body>
-</html>
+		<Links facebook="me" instagram="me" twitter="me" linkedin="me" />
+	</Fragment>
+	<Fragment slot="secondary">
+		<About
+			text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias rerum non incidunt nihil doloremque quam aspernatur, delectus dolorem esse unde natus cupiditate architecto!"
+		/>
+		<hr class="border-neutral-900" />
+		<Details
+			title="Education"
+			year="2018 - 2020"
+			subtitle="Bachelor in Computer Science"
+			info="Harvad University"
+		/>
+		<hr class="border-neutral-900" />
+		<Details
+			title="Experience"
+			year="2021 - Present"
+			subtitle="Junior Software Engineer"
+			info="Acme, Inc."
+		/>
+		<Button email="johndoe@example.com" />
+	</Fragment>
+</Base>

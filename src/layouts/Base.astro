@@ -24,7 +24,9 @@ const { title, description, favicon } = Astro.props as Props;
         <div class="flex flex-col md:flex-row">
             <div class="h-screen md:w-1/2">
                 <header class="h-full grid place-items-center">
-                    <slot name="primary" />
+                    <div class="h-5/6 flex flex-col justify-evenly items-center">
+                        <slot name="primary" />
+                    </div>
                 </header>
             </div>
             <main

@@ -1,0 +1,39 @@
+---
+export interface Props {
+    title: string;
+    description: string;
+    favicon: string;
+}
+
+const { title, description, favicon } = Astro.props as Props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href={favicon} />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+    </head>
+    <body
+        class="bg-gradient-to-br from-neutral-700 via-neutral-800 to-neutral-900 text-slate-50"
+    >
+        <div class="flex flex-col md:flex-row">
+            <div class="h-screen md:w-1/2">
+                <header class="h-full grid place-items-center">
+                    <div class="h-5/6 flex flex-col justify-evenly items-center">
+                        <slot name="primary" />
+                    </div>
+                </header>
+            </div>
+            <main
+                class="h-screen md:w-1/2 bg-gradient-to-br from-cyan-300 via-cyan-400 to-cyan-500 text-neutral-800 rounded-tl-lg rounded-tr-lg md:rounded-tr-none md:rounded-bl-lg flex flex-col justify-evenly px-8 py-6"
+            >
+                <slot name="secondary" />
+            </main>
+        </div>
+    </body>
+</html>

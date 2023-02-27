@@ -8,7 +8,7 @@ export interface Props {
 const { year, title, info, subtitle } = Astro.props as Props;
 ---
 
-<section class="grid grid-cols-3 grid-rows-3">
+<section class="grid grid-cols-3 gap-4 grid-rows-3">
     <h2 class="col-start-1 col-end-4 text-lg uppercase font-medium">{title}</h2>
     <h3 class="col-start-1 col-end-2 text-lg">{year}</h3>
     <p class="col-start-2 col-end-4 capitalize text-lg">{subtitle}</p>
